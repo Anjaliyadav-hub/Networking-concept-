@@ -98,11 +98,9 @@ Isolated network: VMs communicate among themselves only.
 
 <h3>7. Kubernetes Networking</h3>
 
-<h3
-Node: Physical or virtual machine in the cluster.>
+Node: Physical or virtual machine in the cluster.
 
-<h3
-Pod: Smallest deployable unit; has its own IP and network namespace.>
+Pod: Smallest deployable unit; has its own IP and network namespace.
 
 Networking handled by CNI plugins (Flannel, Cilium).
 
