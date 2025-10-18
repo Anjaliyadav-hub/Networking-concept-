@@ -117,12 +117,21 @@ Services: Expose pods to internal/external traffic.
 Concept	Layer	Purpose	Example/Tool
 
  1.TUN	L3	Route IP packets between VMs/containers	Linux TUN
+ 
 2.TAP	L2	Connect Ethernet frames between VMs	Linux TAP
+
 3. VXLAN	L2/L3	Overlay network across nodes	Kubernetes, OpenStack
+
 4. Flannel	L3	Simple pod networking	Kubernetes CNI
+
 5. Cilium	L3/L4/L7	High-performance pod networking	Kubernetes CNI
+
 6. Zero-Copy	-	Efficient packet processing	DPDK, eBPF
+
 7. Packet-Copy	-	Traditional packet handling	tcpdump
+
 8. Libvirt	-	Manage VMs & virtual networks	virt-manager
+
 9. Node (K8s)	-	Host machine in cluster	-
+    
 10.Pod (K8s)	-	Smallest deployable unit	-
