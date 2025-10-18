@@ -1,3 +1,4 @@
+
 # Networking-concept-
 <h1>Networking in Cloud Computing – Notes</h1>
 
@@ -18,9 +19,9 @@ Virtual network device for Layer 2 (Ethernet frames).
 Used to simulate an Ethernet network between VMs/containers.
 
 
-# Use in Cloud: Connect VMs, containers, or overlay networks without physical hardware.
+Use in Cloud: Connect VMs, containers, or overlay networks without physical hardware.
 
-
+----
 <h3>2. VXLAN (Virtual Extensible LAN)</h3>
 
 Encapsulates Layer 2 frames inside Layer 3 packets.
@@ -31,7 +32,7 @@ ID (VXLAN Network Identifier) separates different virtual networks.
 
 Widely used in cloud networking (OpenStack, Kubernetes).
 
-
+-----
 <h3>3. Flannel</h3>
 
 Kubernetes CNI plugin for simple overlay networking.
@@ -85,7 +86,7 @@ Use case: High-speed networking in cloud, container networking.
 
 API/tool to manage virtual machines.
 
-# Networking with libvirt:
+ Networking with libvirt:
 
 Bridged network: VM acts like physical host in LAN.
 
@@ -105,7 +106,7 @@ Pod: Smallest deployable unit; has its own IP and network namespace.>
 
 Networking handled by CNI plugins (Flannel, Cilium).
 
-# Pod-to-Pod communication can span nodes via overlay networks (VXLAN/eBPF).
+  Pod-to-Pod communication can span nodes via overlay networks (VXLAN/eBPF).
 
 Services: Expose pods to internal/external traffic.
 
@@ -115,13 +116,13 @@ Services: Expose pods to internal/external traffic.
 
 Concept	Layer	Purpose	Example/Tool
 
-# TUN	L3	Route IP packets between VMs/containers	Linux TUN
-# TAP	L2	Connect Ethernet frames between VMs	Linux TAP
-# VXLAN	L2/L3	Overlay network across nodes	Kubernetes, OpenStack
-# Flannel	L3	Simple pod networking	Kubernetes CNI
-# Cilium	L3/L4/L7	High-performance pod networking	Kubernetes CNI
-# Zero-Copy	-	Efficient packet processing	DPDK, eBPF
-# Packet-Copy	-	Traditional packet handling	tcpdump
-# Libvirt	-	Manage VMs & virtual networks	virt-manager
-# Node (K8s)	-	Host machine in cluster	-
-# Pod (K8s)	-	Smallest deployable unit	-
+ 1.TUN	L3	Route IP packets between VMs/containers	Linux TUN
+2.TAP	L2	Connect Ethernet frames between VMs	Linux TAP
+3. VXLAN	L2/L3	Overlay network across nodes	Kubernetes, OpenStack
+4. Flannel	L3	Simple pod networking	Kubernetes CNI
+5. Cilium	L3/L4/L7	High-performance pod networking	Kubernetes CNI
+6. Zero-Copy	-	Efficient packet processing	DPDK, eBPF
+7. Packet-Copy	-	Traditional packet handling	tcpdump
+8. Libvirt	-	Manage VMs & virtual networks	virt-manager
+9. Node (K8s)	-	Host machine in cluster	-
+10.Pod (K8s)	-	Smallest deployable unit	-
